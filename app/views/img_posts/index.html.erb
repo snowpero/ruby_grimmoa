@@ -1,0 +1,41 @@
+<h1>Listing img_posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Post date</th>
+      <th>Desc Date</th>
+      <th>Post link</th>
+      <th>Post thumb</th>
+      <th>Post title</th>
+      <th>Site info</th>
+      <th>Count recommend</th>
+      <th>Count reply</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @img_posts.each do |img_post| %>
+      <tr>
+        <td><%= img_post.user_id %></td>
+        <td><%= img_post.post_date %></td>
+        <td><%= img_post.desc_date %></td>
+        <td><%= img_post.post_link %></td>
+        <td><%= img_post.post_thumb %></td>
+        <td><%= img_post.post_title %></td>
+        <td><%= img_post.site_info %></td>
+        <td><%= img_post.count_recommend %></td>
+        <td><%= img_post.count_reply %></td>
+        <td><%= link_to 'Show', img_post %></td>
+        <td><%= link_to 'Edit', edit_img_post_path(img_post) %></td>
+        <td><%= link_to 'Destroy', img_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Img post', new_img_post_path %>

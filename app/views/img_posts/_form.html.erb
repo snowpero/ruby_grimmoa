@@ -1,0 +1,49 @@
+<%= form_for(@img_post) do |f| %>
+  <% if @img_post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@img_post.errors.count, "error") %> prohibited this img_post from being saved:</h2>
+
+      <ul>
+      <% @img_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :post_date %><br>
+    <%= f.text_field :post_date %>
+  </div>
+  <div class="field">
+    <%= f.label :post_link %><br>
+    <%= f.text_field :post_link %>
+  </div>
+  <div class="field">
+    <%= f.label :post_thumb %><br>
+    <%= f.text_field :post_thumb %>
+  </div>
+  <div class="field">
+    <%= f.label :post_title %><br>
+    <%= f.text_field :post_title %>
+  </div>
+  <div class="field">
+    <%= f.label :site_info %><br>
+    <%= f.text_field :site_info %>
+  </div>
+  <div class="field">
+    <%= f.label :count_recommend %><br>
+    <%= f.number_field :count_recommend %>
+  </div>
+  <div class="field">
+    <%= f.label :count_reply %><br>
+    <%= f.number_field :count_reply %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

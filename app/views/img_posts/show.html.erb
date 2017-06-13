@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @img_post.user_id %>
+</p>
+
+<p>
+  <strong>Desc date:</strong>
+  <%= @img_post.desc_date %>
+</p>
+
+<p>
+  <strong>Post link:</strong>
+  <%= @img_post.post_link %>
+</p>
+
+<p>
+  <strong>Post thumb:</strong>
+  <%= @img_post.post_thumb %>
+</p>
+
+<p>
+  <strong>Post title:</strong>
+  <%= @img_post.post_title %>
+</p>
+
+<p>
+  <strong>Site info:</strong>
+  <%= @img_post.site_info %>
+</p>
+
+<p>
+  <strong>Count recommend:</strong>
+  <%= @img_post.count_recommend %>
+</p>
+
+<p>
+  <strong>Count reply:</strong>
+  <%= @img_post.count_reply %>
+</p>
+
+<%= link_to 'Edit', edit_img_post_path(@img_post) %> |
+<%= link_to 'Back', img_posts_path %>
